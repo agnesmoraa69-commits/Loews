@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Coral &amp; Palm Soirée | Loews Coral Gables</title>
+<meta name="description" content="An invitation only afternoon at Loews Coral Gables. November 14, 2026.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="glow glow-a" aria-hidden="true"></div>
+<div class="glow glow-b" aria-hidden="true"></div>
+
+<header class="hero">
+  <p class="host">Loews Coral Gables presents</p>
+  <h1>The Coral<br><span class="amp">&amp;</span> Palm Soirée</h1>
+  <div class="rule" aria-hidden="true"></div>
+  <p class="lede">An afternoon for the golfing community, invited guests and friends of the house. Garden terraces, rare pours and a long table beneath the Gables sky.</p>
+  <a class="cta" href="#reserve">Reserve your seat</a>
+</header>
+
+<main>
+  <section class="details glass" aria-labelledby="details-title">
+    <h2 id="details-title">The afternoon</h2>
+    <dl>
+      <div><dt>Date</dt><dd>Saturday, November 14, 2026</dd></div>
+      <div><dt>Hours</dt><dd>2:00 PM to 7:00 PM</dd></div>
+      <div><dt>Venue</dt><dd>Loews Coral Gables<br><span>2 Alhambra Plaza, Coral Gables</span></dd></div>
+      <div><dt>Dress</dt><dd>Resort formal, linen and tailoring</dd></div>
+    </dl>
+    <ul class="atmosphere">
+      <li>Champagne reception on the terrace</li>
+      <li>Chef's tasting menu with a sommelier pairing</li>
+      <li>Live strings through golden hour</li>
+      <li>Valet and private entry for all guests</li>
+    </ul>
+  </section>
+
+  <section class="reserve glass" id="reserve" aria-labelledby="reserve-title">
+    <div class="panel" id="formPanel">
+      <h2 id="reserve-title">Request a seat</h2>
+      <p class="sub">Seating is limited and confirmed against your invitation code.</p>
+      <form id="rsvpForm" novalidate>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+          <small class="err" id="err-name" role="alert"></small>
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+          <small class="err" id="err-email" role="alert"></small>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="affiliation">Affiliation</label>
+            <select id="affiliation" name="affiliation" required>
+              <option value="" selected disabled>Select one</option>
+              <option>Miami Country Club / Golfing Community</option>
+              <option>Invited VIP Guest</option>
+              <option>Official Media / Partner</option>
+            </select>
+            <small class="err" id="err-affiliation" role="alert"></small>
+          </div>
+          <div class="field narrow">
+            <label for="party">Seats</label>
+            <select id="party" name="party">
+              <option>1</option><option>2</option><option>3</option><option>4</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="code">Invitation code</label>
+          <input id="code" name="code" type="text" autocomplete="off" placeholder="CP26-XXXX" required>
+          <small class="err" id="err-code" role="alert"></small>
+        </div>
+        <button type="submit" class="cta full" id="submitBtn">Request my seat</button>
+        <p class="secure">Your request is sent over an encrypted connection.</p>
+      </form>
+    </div>
+
+    <div class="panel hidden" id="loadingPanel" aria-live="polite">
+      <div class="seal" aria-hidden="true"><span></span></div>
+      <h2>Securing your seat</h2>
+      <p class="status" id="statusText">Encrypting your request</p>
+      <div class="bar" aria-hidden="true"><i id="barFill"></i></div>
+    </div>
+
+    <div class="panel hidden" id="successPanel" aria-live="polite">
+      <div class="check" aria-hidden="true">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l8 8 14-16"/></svg>
+      </div>
+      <h2>Your seat is reserved</h2>
+      <p class="sub" id="successMsg"></p>
+      <dl class="summary">
+        <div><dt>Reference</dt><dd id="sumRef"></dd></div>
+        <div><dt>Guest</dt><dd id="sumName"></dd></div>
+        <div><dt>Affiliation</dt><dd id="sumAff"></dd></div>
+        <div><dt>Seats</dt><dd id="sumParty"></dd></div>
+      </dl>
+      <div class="actions">
+        <button type="button" class="cta full" id="calBtn">Add to calendar</button>
+        <button type="button" class="ghost" id="resetBtn">Reserve another seat</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>The Coral &amp; Palm Soirée, by invitation only. Loews Coral Gables.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+  </html>
