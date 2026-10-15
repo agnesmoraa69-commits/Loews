@@ -43,7 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearInterval(interval);
 
                 const refCode = 'CP-' + Math.random().toString(36).substring(2, 8).toUpperCase();
-
+const { error } = await sb.from('reservations').insert({ ref: refCode, name: name, email: email, affiliation: affiliation, party: Number(party), code: code });
+if (error) { alert('Something went wrong, please try again'); loadingPanel.classList.add('hidden'); formPanel.classList.remove('hidden'); return; }
                 sessionStorage.setItem('reservation', JSON.stringify({
                     ref: refCode,
                     name: name,
