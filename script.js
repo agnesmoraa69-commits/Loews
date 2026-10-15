@@ -1,3 +1,4 @@
+const sb = supabase.createClient('https://iyddjjnfkyufmkpljkof.supabase.co', 'sb_publishable_uO2cnMJj1whL_qa4VpDS6Q_JN_P-QU4');
 document.addEventListener('DOMContentLoaded', () => {
     const rsvpForm = document.getElementById('rsvpForm');
     const formPanel = document.getElementById('formPanel');
