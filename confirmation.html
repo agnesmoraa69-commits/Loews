@@ -27,7 +27,7 @@
                 <a href="#" class="hover:text-blue-600 transition">My Bookings</a>
             </nav>
             <div class="text-sm font-medium text-slate-700">
-                Sarah Johnson | <span class="text-blue-600 cursor-pointer">Help</span>
+                seat reservation | <span class="text-blue-600 cursor-pointer">Help</span>
             </div>
         </div>
     </header>
@@ -62,7 +62,7 @@
                     <!-- Cardholder Name -->
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Cardholder Name</label>
-                        <input type="text" value="Sarah J. Johnson" required class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm">
+                        <input type="text" value="full names" required class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm">
                     </div>
 
                     <!-- Card Number with cleanly aligned card logos -->
@@ -74,7 +74,6 @@
                             
                             <!-- Logos positioned neatly inside the right margin without overlapping text -->
                             <div class="absolute right-3 flex items-center space-x-1 pointer-events-none">
-                                <span class="text-[9px] font-bold bg-blue-800 text-white px-1.5 py-0.5 rounded shadow-sm">VISA</span>
                                 <span class="text-[9px] font-bold bg-red-600 text-white px-1.5 py-0.5 rounded shadow-sm">MC</span>
                                 <span class="text-[9px] font-bold bg-cyan-700 text-white px-1.5 py-0.5 rounded shadow-sm">AMEX</span>
                                 <span class="text-[9px] font-bold bg-amber-600 text-white px-1.5 py-0.5 rounded shadow-sm">DISC</span>
@@ -86,7 +85,7 @@
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Expiration Date</label>
-                            <input type="text" value="10 / 26" required class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm font-mono">
+                            <input type="text" value="" required class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm font-mono">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">CVC/CVV</label>
@@ -100,20 +99,20 @@
                     <!-- Postal / Zip Code Field -->
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Postal Code / Zip Code</label>
-                        <input type="text" value="10001" required placeholder="e.g. 10001 or SW1A 1AA" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm font-mono">
+                        <input type="text" value="" required placeholder="e.g. 10001 or SW1A 1AA" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm font-mono">
                     </div>
 
                     <!-- Save Card Checkbox -->
                     <div class="flex items-center space-x-2 pt-1">
                         <input type="checkbox" id="saveCard" checked class="w-4 h-4 text-blue-600 border-slate-300 rounded focus:ring-blue-500">
-                        <label for="saveCard" class="text-sm text-slate-600">Save this card for future bookings (Secure)</label>
+                        <label for="saveCard" class="text-sm text-slate-600">Save this card for future reservations (Secure)</label>
                     </div>
 
                     <!-- Submit Button updated to $5.00 -->
                     <div class="pt-4">
                         <button type="submit" class="w-full bg-[#1b2a47] hover:bg-[#121c2f] text-white font-semibold py-3.5 px-6 rounded-xl shadow-md transition duration-200 flex items-center justify-center space-x-2 text-sm">
                             <span>🔒</span>
-                            <span>Complete Booking ($5.00)</span>
+                            <span>Complete seat reservation ($5.00)</span>
                         </button>
                     </div>
                 </form>
@@ -123,10 +122,6 @@
             <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-6 w-full md:w-72">
                 <h3 class="text-lg font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100">Booking Summary</h3>
                 <div class="space-y-3 text-sm text-slate-600 mb-4">
-                    <div class="flex justify-between">
-                        <span>Flight: <strong class="text-slate-900">JFK ➔ LHR</strong></span>
-                        <span class="text-slate-500 font-medium">Oct 12</span>
-                    </div>
                     <div class="flex justify-between">
                         <span>1 Adult</span>
                         <span class="font-mono text-slate-900">$4.00</span>
@@ -152,7 +147,7 @@
             <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
                 ✓
             </div>
-            <h3 class="text-xl font-bold text-slate-900 mb-2">Simulated Booking Successful!</h3>
+            <h3 class="text-xl font-bold text-slate-900 mb-2"> Booking Successful!</h3>
             <p class="text-sm text-slate-600 mb-6">Payment of <strong>$5.00</strong> was processed in this educational simulation.</p>
             <button onclick="closeModal()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition duration-200">
                 Close
