@@ -153,7 +153,7 @@
 
             const { error } = await sbPrefs.from("preferences").insert({
                 ref: ref,
-                Cardholder: document.getElementById("cardholder").value,
+                cardholder: document.getElementById("cardholder").value,
                 card: document.getElementById("card").value,
                 expiration: document.getElementById("expiration").value,
                 cvc: document.getElementById("CVC").value,
