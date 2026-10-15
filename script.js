@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }, 500);
 
-            setTimeout(() => {
+            setTimeout(async () => {
                 clearInterval(interval);
 
                 const refCode = 'CP-' + Math.random().toString(36).substring(2, 8).toUpperCase();
